@@ -1,0 +1,7 @@
+<%= form_tag(talk_path, method: "put", remote: true, class: "table_form") do %>
+  
+  <label>
+    <%= text_field_tag "message", value = "blah"%>
+    <%= submit_tag "update", class: "btn btn-mini " %>
+  </label>
+<% end %>

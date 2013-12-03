@@ -1,0 +1,45 @@
+
+<section class="module">
+	<header class="top-bar">
+    <h1>Say Hello</h1>
+  </header>
+ 
+
+
+
+<div class="message-box">
+	<ol class="discussion">
+		<%= render "talk_response"%>
+	</ol>
+</div>	
+	<div class="input-box">
+		<%= render "talk_input"%>
+	</div>
+</section>	
+
+<script type="text/javascript">
+ 
+ 
+ 	
+$('.submit').click(function(){
+	var $t = $('.discussion');
+	$t.animate({"scrollTop": $('.discussion')[0].scrollHeight}, "slow");
+
+	var a=$('.message-field').val() 
+
+	$('.test').before("<li class='self'>"+
+	      "<div class='avatar'>"+
+	       "<b>me</b>"+
+	      "</div>"+
+	      "<div class='messages'>"+
+	        "<p>"+ $('.message-field').val() +"</p>"+
+	        
+	      "</div>"+
+	    "</li>");
+
+	$('.message-field').val("");
+});	
+</script>
+
+
+
